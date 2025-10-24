@@ -44,6 +44,8 @@ namespace backend.Controllers
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] TaskItem item)
         {
+            item.Id = 0; 
+            item.CreatedAt = DateTime.UtcNow;
             var newItem = await _taskService.AddAsync(item);
             return CreatedAtAction(nameof(GetById), new { id = newItem.Id }, newItem);
         }

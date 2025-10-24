@@ -6,6 +6,17 @@ using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", builder =>
+    {
+        builder.WithOrigins("http://localhost:5173") // Adjust origin as needed
+               .AllowAnyMethod()
+               .AllowAnyHeader()
+               .AllowCredentials(); // Allow credentials 
+    });
+});
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -34,6 +45,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("AllowFrontend");
 
 app.UseAuthorization();
 
