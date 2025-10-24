@@ -29,33 +29,64 @@ namespace backend.Controllers
         [HttpGet]
         public async Task<IActionResult> GetLatest()
         {
-            var items = await _taskService.GetLatestAsync();
-            return Ok(items);
+            try
+            {
+                var items = await _taskService.GetLatestAsync();
+                return Ok(items);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred while geting data.", error = ex.Message });
+            }
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var item = await _taskService.GetByIdAsync(id);
-            if (item == null) return NotFound();
-            return Ok(item);
+            try
+            {
+                var item = await _taskService.GetByIdAsync(id);
+                if (item == null) return NotFound();
+                return Ok(item);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred while geting data..", error = ex.Message });
+            }
         }
 
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] TaskItem item)
         {
-            item.Id = 0; 
-            item.CreatedAt = DateTime.UtcNow;
-            var newItem = await _taskService.AddAsync(item);
-            return CreatedAtAction(nameof(GetById), new { id = newItem.Id }, newItem);
+            try {
+                if (item == null)
+                    return BadRequest(new { message = "Invalid data." });
+
+                item.Id = 0;
+                item.CreatedAt = DateTime.UtcNow;
+
+                var newItem = await _taskService.AddAsync(item);
+                return CreatedAtAction(nameof(GetById), new { id = newItem.Id }, newItem);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred while adding the data.", error = ex.Message });
+            }
         }
 
         [HttpPut("{id}/done")]
         public async Task<IActionResult> MarkAsDone(int id)
         {
-            var success = await _taskService.MarkAsDoneAsync(id);
-            if (!success) return NotFound();
-            return Ok(new { message = "Task marked as done." });
+            try
+            {
+                var success = await _taskService.MarkAsDoneAsync(id);
+                if (!success) return NotFound();
+                return Ok(new { message = "Task marked as done." });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred while marking the task as done.", error = ex.Message });
+            }
         }
     }
 }

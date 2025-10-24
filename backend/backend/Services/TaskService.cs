@@ -15,17 +15,17 @@ namespace backend.Services
             _context = context;
         }
 
-        //public async Task<IEnumerable<TaskItem>> GetAllAsync()
-        //{
-        //    return await _context.TaskItems
-        //        .OrderByDescending(x => x.CreatedAt)
-        //        .ToListAsync();
-        //}
+		//public async Task<IEnumerable<TaskItem>> GetAllAsync()
+		//{
+		//    return await _context.TaskItems
+		//        .OrderByDescending(x => x.CreatedAt)
+		//        .ToListAsync();
+		//}
 
-        public async Task<IEnumerable<TaskItem>> GetLatestAsync()
+		public async Task<IEnumerable<TaskItem>> GetLatestAsync()
         {
             return await _context.TaskItems
-                .Where(x => !x.IsCompleted)
+				.Where(x => !x.IsCompleted)
                 .OrderByDescending(x => x.CreatedAt)
                 .Take(5)
                 .ToListAsync();

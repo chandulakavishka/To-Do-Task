@@ -6,7 +6,7 @@ const TaskList = ({ tasks, getData }) => {
   
   const taskDone = async (id) => {
     try {
-      await axios.put(`http://localhost:5260/api/Task/${id}/done`);
+      await axios.put(`http://localhost:8080/api/Task/${id}/done`);
       getData(); // get latest data
     } catch (err) {
       console.error("Error marking task done:", err);

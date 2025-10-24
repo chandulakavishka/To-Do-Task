@@ -10,7 +10,7 @@ function App() {
   // get latest data
   const getData = async () => {
     try {
-      const response = await axios.get("http://localhost:5260/api/Task");
+      const response = await axios.get("http://localhost:8080/api/Task");
       setTasks(response.data);
     } catch (err) {
       console.error("Error fetching tasks:", err);

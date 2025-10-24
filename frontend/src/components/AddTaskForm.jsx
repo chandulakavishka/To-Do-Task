@@ -15,7 +15,7 @@ const AddTaskForm = ({ getData }) => {
     setError(null);
 
     try {
-      await axios.post("http://localhost:5260/api/Task", {
+      await axios.post("http://localhost:8080/api/Task", {
         title: title,
         description: desc,
         isCompleted: false

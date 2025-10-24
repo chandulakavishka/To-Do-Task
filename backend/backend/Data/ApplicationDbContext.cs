@@ -10,4 +10,5 @@ namespace backend.Data
 
         public DbSet<TaskItem> TaskItems { get; set; }
     }
+
 }
