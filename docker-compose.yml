@@ -13,6 +13,11 @@ services:
       - mysql_data:/var/lib/mysql
     networks:
       - todo-network
+    healthcheck:
+       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+       interval: 5s
+       timeout: 5s
+       retries: 10
 
 
   backend:
@@ -23,7 +28,8 @@ services:
     ports:
       - "8080:8080" #localhost:8080
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__DefaultConnection=server=mysql;port=3306;database=todo_db;user=root;password=12345

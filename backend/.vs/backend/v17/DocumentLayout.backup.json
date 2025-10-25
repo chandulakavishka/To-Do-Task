@@ -50,8 +50,7 @@
               "RelativeToolTip": "backend\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-24T15:18:00.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T15:18:00.156Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "backend\\Services\\TaskService.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAqwDYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T16:06:44.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T16:06:44.792Z"
             },
             {
               "$type": "Document",
@@ -76,8 +74,7 @@
               "RelativeToolTip": "backend\\Models\\TaskItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T16:06:39.912Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T16:06:39.912Z"
             },
             {
               "$type": "Document",
@@ -89,8 +86,7 @@
               "RelativeToolTip": "backend\\Interfaces\\ITaskService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T16:06:33.842Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T16:06:33.842Z"
             },
             {
               "$type": "Document",
@@ -102,8 +98,7 @@
               "RelativeToolTip": "backend\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T16:06:30.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T16:06:30.536Z"
             },
             {
               "$type": "Document",
@@ -115,8 +110,7 @@
               "RelativeToolTip": "backend\\Controllers\\TaskController.cs",
               "ViewState": "AgIAAE4AAAAAAAAAAAAowFcAAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T16:06:08.976Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T16:06:08.976Z"
             },
             {
               "$type": "Document",
@@ -126,7 +120,7 @@
               "RelativeDocumentMoniker": "backend\\Program.cs",
               "ToolTip": "D:\\My campus document\\Acadamic Semester 6\\interview\\Interview Assignment\\To-Do-Task\\backend\\backend\\Program.cs",
               "RelativeToolTip": "backend\\Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T05:02:20.923Z",
               "EditorCaption": ""
