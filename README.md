@@ -53,3 +53,9 @@ docker-compose down
 Add a note like:
 
 ⚠️ Port Conflicts: If Docker fails to bind ports, make sure no other processes are using them. You can change host ports.
+
+After resolving any port conflicts:
+```bash
+docker-compose build --no-cache
+```
+Then start the containers again:
