@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import API from "../api";
 
 const AddTaskForm = ({ getData }) => {
   const [title, setTitle] = useState("");
@@ -15,7 +16,7 @@ const AddTaskForm = ({ getData }) => {
     setError(null);
 
     try {
-      await axios.post("http://localhost:8080/api/Task", {
+      await API.post("/Task", {
         title: title,
         description: desc,
         isCompleted: false

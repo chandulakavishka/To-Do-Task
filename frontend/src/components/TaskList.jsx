@@ -1,12 +1,13 @@
 import React from "react";
 import axios from "axios";
+import API from "../api";
 
 const TaskList = ({ tasks, getData }) => {
 
   
   const taskDone = async (id) => {
     try {
-      await axios.put(`http://localhost:8080/api/Task/${id}/done`);
+      await API.put(`/Task/${id}/done`);
       getData(); // get latest data
     } catch (err) {
       console.error("Error marking task done:", err);

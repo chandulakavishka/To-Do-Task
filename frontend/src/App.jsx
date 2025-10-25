@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import API from "./api";
 import AddTaskForm from "./components/AddTaskForm";
 import TaskList from "./components/TaskList";
 import "./App.css";
@@ -10,7 +11,7 @@ function App() {
   // get latest data
   const getData = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/Task");
+      const response = await API.get("/Task");
       setTasks(response.data);
     } catch (err) {
       console.error("Error fetching tasks:", err);
