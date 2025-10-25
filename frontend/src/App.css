@@ -90,6 +90,9 @@ button:hover {
   border-color: black;
   cursor: pointer;
 }
+.task-card p {
+  font-size: 13px;
+}
 
 
 /* For tablets and small laptops */
